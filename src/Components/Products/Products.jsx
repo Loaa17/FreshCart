@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 
 export default function Products(props) {
 
- let {data , isError , error , isLoading } = useProducts()
+ let {data , isError  , isLoading } = useProducts()
 
 
  let {addProductCart} = useContext(CartContext);

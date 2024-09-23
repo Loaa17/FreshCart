@@ -10,10 +10,10 @@ export default function RecentProducts() {
   let { addProductCart } = useContext(CartContext);
   let { addProductWishlist, removeProductWishlist } = useContext(WishlistContext);
 
-  const [wishlistProductIds, setWishlistProductIds] = useState(new Set()); // Track wishlist items
+  const [wishlistProductIds, setWishlistProductIds] = useState(new Set()); 
 
   async function addToCart(id) {
-    let response = await addProductCart(id);
+    let response = await addProductCart(id);    
 
     if (response.data.status === "success") {
       toast.success(response.data.message);
@@ -94,3 +94,4 @@ export default function RecentProducts() {
     </>
   );
 }
+
